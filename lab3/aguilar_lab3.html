@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="STYLE.css">
+    <script src="script.js" defer></script>
+</head>
+<body onload="displayTimeGreeting()">
+
+<header class="navbar">
+    <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="Logo">
+        <span>WebProg</span>
+    </a>
+
+    <button id="themeBtn">Toggle Dark Mode</button>
+</header>
+
+<main id="main-content">
+
+    <section class="left-column">
+        <div id="home">
+            <img src="../assets/aguilar.jpg" class="profile-img">
+
+            <h2 class="name">Frances Heart B. Aguilar</h2>
+            <p id="timeGreeting"></p>
+            <p class="job-title" id="jobTitle">BSIT Student • Aspiring Web Developer</p>
+
+            <button id="editJobBtn">Edit Job Title</button>
+        </div>
+
+        <hr><br>
+
+        <div class="contact-section">
+            <h3>📩 Contact</h3>
+            <p>Email: <a href="mailto:aguilarfb@students.nu-fairview.edu.ph">aguilarfb@students.nu-fairview.edu.ph</a></p>
+            <p>Phone: 09948651789</p>
+            <p>Location: Quezon City, Philippines</p>
+        </div>
+
+        <hr><br>
+
+        <button id="toggleSkillsBtn">Hide Skills</button>
+
+        <div class="skills-section" id="skillsSection">
+            <h3>🛠 Skills</h3>
+            <dl>
+                <dt>Programming Languages</dt>
+                <dd>Python, Java, HTML</dd>
+
+                <dt>Other</dt>
+                <dd>UI/UX Basics</dd>
+            </dl>
+
+            <br>
+            <h3>🏅 Achievements</h3>
+            <dl>
+                <dd>1st Honor Dean's Lister (2024–2025)</dd>
+            </dl>
+        </div>
+    </section>
+
+    <section class="right-column">
+        <div id="about">
+            <h2>About Me</h2>
+            <p>Hello! I’m <strong>Frances Heart Aguilar</strong>, a BSIT student from National University.</p>
+            <p>I enjoy learning programming languages such as Java, Python, and HTML.</p>
+            <p>My goal is to become a full-stack developer and create meaningful software projects.</p>
+        </div>
+
+        <hr><br>
+
+        <div class="message-section">
+            <form onsubmit="return validateForm()">
+                <h2>Message Me</h2>
+
+                <label>Name:<br>
+                    <input type="text" name="name" id="nameField">
+                </label>
+
+                <label>Email:<br>
+                    <input type="email" name="email" id="emailField">
+                </label>
+
+                <label>Message (Max 200 chars):<br>
+                    <textarea id="msgBox" maxlength="200" name="message"></textarea>
+                </label>
+
+                <p>Characters left: <span id="counter">200</span></p>
+
+                <input type="submit" value="Send">
+            </form>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <strong>WebProg - Web Programming 2025</strong>
+    <p id="dateDisplay"></p>
+</footer>
+
+</body>
+</html>
